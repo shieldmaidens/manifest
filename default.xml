@@ -10,7 +10,7 @@
     <default revision="mainline"
              sync-j="4"/>
 
-    <project path="manifests" remote="nova-engine" name="manifests">
+    <project path="manifest" remote="nova-engine" name="manifest">
         <linkfile src="update.py" dest="update.py"/>
     </project>
     <project path="server/pleiades" remote="nova-engine" name="pleiades" groups="pleiades"/>
