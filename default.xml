@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <notice>
+    <notice>f
         Welcome to the Nova Engine source tree. Please enjoy and respect the peace.
     </notice>
     <remote name="nova-engine"
@@ -15,4 +15,5 @@
     </project>
     <project path="pleiades" remote="nova-engine" name="nova/pleiades" groups="pleiades"/>
     <project path="api" remote="nova-engine" name="nova/api" groups="pleiades"/>
+    <project path="raft" remote="nova-engine" name="nova/raft" groups="pleiades"/>
 </manifest>
