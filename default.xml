@@ -11,7 +11,6 @@
              sync-j="4"/>
 
     <project path="manifest" remote="nova-engine" name="nova/manifest">
-        <linkfile src="update.py" dest="update.py"/>
     </project>
     <project path="pleiades" remote="nova-engine" name="nova/pleiades" groups="pleiades"/>
     <project path="api" remote="nova-engine" name="nova/api" groups="pleiades"/>
