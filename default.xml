@@ -4,8 +4,8 @@
         Welcome to the Nova Engine source tree. Please enjoy and respect the peace.
     </notice>
     <remote name="nova-engine"
-            fetch="https://git.r3t.io/nova-engine/"
-            review="https://git.r3t.io/nova-engine/"/>
+            fetch=".."
+            review="https://review.r3t.io/nova/"/>
 
     <default revision="mainline"
              sync-j="4"/>
@@ -13,8 +13,8 @@
     <project path="manifest" remote="nova-engine" name="manifest">
         <linkfile src="update.py" dest="update.py"/>
     </project>
-    <project path="server/pleiades" remote="nova-engine" name="pleiades" groups="pleiades"/>
-    <project path="docs" remote="nova-engine" name="docs"/>
+    <project path="pleiades" remote="nova-engine" name="pleiades" groups="pleiades"/>
+    <!-- <project path="docs" remote="nova-engine" name="docs"/> -->
 
     <!-- vendored dependencies below here
     <remote name="github"
