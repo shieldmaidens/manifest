@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <notice>f
+    <notice>
+
         Welcome to the Nova Engine source tree. Please enjoy and respect the peace.
+
     </notice>
     <remote name="nova-engine"
-            fetch=".."
-            review="https://review.r3t.io/"/>
+        fetch=".."
+        review="https://review.r3t.io/" />
 
     <default revision="mainline"
-             sync-j="4"/>
+        sync-j="4" />
 
-    <project path="manifest" remote="nova-engine" name="nova/manifest">
+    <project path="manifest" remote="nova-engine" name="nova/manifest" />
+    <project path="pleiades" remote="nova-engine" name="nova/pleiades" groups="pleiades" />
+    <project path="api" remote="nova-engine" name="nova/api" groups="pleiades">
+        <linkfile src="api/rust" dest="raft/proto" />
     </project>
-    <project path="pleiades" remote="nova-engine" name="nova/pleiades" groups="pleiades"/>
-    <project path="api" remote="nova-engine" name="nova/api" groups="pleiades"/>
-    <project path="raft" remote="nova-engine" name="nova/raft" groups="pleiades"/>
+    <project path="raft" remote="nova-engine" name="nova/raft" groups="pleiades">
+        <linkfile src="raft" dest="pleiades/raft" />
+    </project>
 </manifest>
