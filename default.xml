@@ -18,6 +18,6 @@
         <linkfile src="api/rust" dest="raft/proto" />
     </project>
     <project path="raft" remote="nova-engine" name="nova/raft" groups="pleiades">
-        <linkfile src="raft" dest="pleiades/raft" />
+        <linkfile src="." dest="pleiades/raft" />
     </project>
 </manifest>
