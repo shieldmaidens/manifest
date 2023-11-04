@@ -5,16 +5,14 @@
         Welcome to the Nova Engine source tree. Please enjoy and respect the peace.
 
     </notice>
-    <remote name="nova-engine"
-        fetch="https://review.r3t.io/"
-        review="https://review.r3t.io/" />
+    <remote name="origin"
+        fetch="https://github.com/"
+        pushurl="https://review.gerrithub.io/"
+        review="https://review.gerrithub.io/" />
 
     <default revision="mainline" sync-j="4" />
 
-    <project path="manifest" remote="nova-engine" name="nova/manifest" />
-    <project path="pleiades" remote="nova-engine" name="nova/pleiades" groups="pleiades" />
-    <project path="api" remote="nova-engine" name="nova/api" groups="pleiades" />
-    <project path="raft" remote="nova-engine" name="nova/raft" groups="pleiades">
-        <linkfile src="." dest="pleiades/raft" />
-    </project>
+    <project path="manifest" remote="origin" name="shieldmaidens/manifest" />
+    <project path="pleiades" remote="origin" name="shieldmaidens/pleiades" groups="pleiades" />
+    <project path="api" remote="origin" name="shieldmaidens/api" groups="pleiades" />
 </manifest>
