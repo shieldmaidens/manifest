@@ -14,5 +14,5 @@
 
     <project path="manifest" remote="origin" name="shieldmaidens/manifest" />
     <project path="pleiades" remote="origin" name="shieldmaidens/pleiades" groups="pleiades" />
-    <project path="api" remote="origin" name="shieldmaidens/api" groups="pleiades" />
+    <project path="api" remote="origin" name="shieldmaidens/nova-api" groups="pleiades" />
 </manifest>
