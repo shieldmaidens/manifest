@@ -6,8 +6,12 @@
 
     </notice>
     <remote name="origin"
-        fetch="https://github.com/"
+        fetch="https://review.gerrithub.io/"
         pushurl="https://review.gerrithub.io/"
+        review="https://review.gerrithub.io/" />
+    
+    <remote name="github"
+        fetch="https://github.com/"
         review="https://review.gerrithub.io/" />
 
     <default revision="mainline" sync-j="4" />
