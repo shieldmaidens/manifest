@@ -1,37 +1,48 @@
 #!/usr/bin/env python3
 
-from contextlib import contextmanager
+
 from subprocess import run
-from os import chdir, getcwd
+from os import mkdir
 from os.path import join, abspath
 from shutil import copy
 
 from link import link
+from variables import Variables, pushd
 
-env_root = abspath(join(__file__, "..", "..", ".."))
+_vars = Variables()
 
-@contextmanager
-def pushd(path):
-    prev = getcwd()
-    chdir(path)
+
+def create_tmp():
+    '''
+    creates a tmp directory for pleiades to use
+    '''
+    print("creating tmp directory")
     try:
-        yield
-    finally:
-        chdir(prev)
+        mkdir(_vars.pleiades_tmp)
+    except FileExistsError:
+        pass
 
 
 def setup_env():
-    src = abspath(join(env_root, "manifest", ".envrc"))
-    dest = abspath(join(env_root, ".envrc"))
+    """
+    Copies the environment file from the manifest directory to the root directory and runs `direnv allow`.
+    :return: None
+    """
+    src = abspath(join(_vars.env_root, "manifest", "envrc"))
+    dest = abspath(join(_vars.env_root, ".envrc"))
     copy(src, dest)
-    with pushd(env_root):
+    with pushd(_vars.env_root):
         print("running direnv allow")
         run(["direnv", "allow"])
 
 
 def main():
+    """
+    This function sets up the environment, links the necessary files, and creates a temporary directory.
+    """
     setup_env()
     link()
+    create_tmp()
 
 
 if __name__ == "__main__":
